@@ -1,18 +1,20 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router'
-import { Suspense, lazy } from 'react'
-import NotFound from '../pages/notFound'
-import Home from '../pages'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import NotFound from '../pages/notFound';
+import Home from '../pages';
 
-export default function AppRoutes(){
-    return (
-        <Router>
-            <Suspense fallback={<div>Loading....</div>}>
-                <Routes>
-                    <Route path='' element={''} />
-                    <Route index element={<Home />} /> // Index page
-                    <Route path='*' element={<NotFound />} /> // 404 page
-                </Routes>
-            </Suspense>
-        </Router>
-    )
+export default function AppRoutes() {
+  return (
+    <Router>
+      <Suspense fallback={<div className="text-center py-8">Loading...</div>}>
+        <Routes>
+          {/* Index (Home) Page */}
+          <Route index element={<Home />} />
+
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </Router>
+  );
 }

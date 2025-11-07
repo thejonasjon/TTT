@@ -1,7 +1,19 @@
+import Hero from "../components/hero";
+import NavBar from "../components/navbar";
+
 export default function Home(){
     return(
         <div>
-            <h1 className="bg-red-500">Home</h1>
+            {/* Header */}
+            <Hero />
+            <div>
+                hello
+            </div>
+
+            {/* Main */}
+            <main>
+                <h1>Hello</h1>
+            </main>
         </div>
     )
 }
