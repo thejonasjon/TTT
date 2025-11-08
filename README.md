@@ -7,18 +7,17 @@ It was built using **Vite**, **React**, and **Tailwind CSS** to implement one sc
 
 ## Project Objective
 
-Complete Implementing **one chosen screen** from the provided sample Figma design below using React.
-
+Complete Implementing Home screen from the provided sample Figma design below using React.
 
 **Figma Design:**
 Confidential
 
 
 ## Tech Stack
-- **React 18** – Component-based UI
-- **Vite** – Fast development build tool
-- **Tailwind CSS** – Utility-first CSS framework
-- **React Router** – For client-side navigation (if applicable)
+- **React** – Component-based UI
+- **Vite** –
+- **Tailwind CSS** – Styles
+- **React Router** – For navigation
 
 
 ## Project Structure
@@ -55,7 +54,7 @@ Visit [http://localhost:5173](http://localhost:5173) to view the project.
 
 Deployed using **Vercel** for a quick preview.
 
- **Live Preview:** ----
+ **Live Preview:** [https://ttt-assessment.netlify.app/](https://ttt-assessment.netlify.app/)
 
 ## License
 
