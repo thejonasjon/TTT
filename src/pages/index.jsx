@@ -4,7 +4,14 @@ import NavBar from "../components/navbar";
 
 import BlogImage1 from '../assets/images/blogimg1.png'
 import FAQImage from '../assets/images/FAQimg.png'
-import { ArrowRight, ChevronDown } from "lucide-react";
+import WhyUsImage1 from '../assets/images/whyUsimg1.png'
+import WhyUsImage2 from '../assets/images/whyUsimg2.jpg'
+import ApproachImage1 from '../assets/images/approachImg1.png'
+import ApproachImage2 from '../assets/images/approachImg2.jpg'
+
+
+import { ArrowRight, Check, ChevronDown, Eye, Feather, Sun } from "lucide-react";
+import Button from "../ui/Button";
 
 export default function Home(){
     const faqs = [
@@ -73,7 +80,102 @@ export default function Home(){
                     </div>
                 </section>
 
-                {/*  */}
+                {/* WHY US  */}
+                <section>
+                    <div className="space-y-8 w-10/12 mx-auto">
+                        <div className="flex justify-between items-center gap-36 ">
+                            <div>
+                            <div className="relative flex-1 rounded-3xl">
+                                    {/* Bottom image */}
+                                    <img
+                                        src={WhyUsImage1}
+                                        alt="Why Us Image 1"
+                                        className="object-cover rounded-3xl"
+                                    />
+
+                                    {/* Top image */}
+                                    <img
+                                        src={WhyUsImage2}
+                                        alt="Why Us Image 2"
+                                        className="absolute left-1/2 top-[200px] object-cover rounded-3xl shadow-lg -translate-x-1/2"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-14 flex-1">
+                                <h3 className="text-4xl leading-14">We connect our customers with the best, and help them keep up-and stay open.</h3>
+
+                                <div className="flex flex-col gap-6">
+                                    {[
+                                        "We connect our customers with the best.",
+                                        "Advisor success customer launch party.",
+                                        "Business-to-consumer long tail."
+                                    ].map((whyUs, index) => (
+                                        <div key={index} className="text-xl leading-8 flex items-center gap-4">
+                                            <span className="p-1 rounded-full bg-[rgba(10,38,64,1)] text-[rgba(255,255,255,1)]"><Check className="w-4 h-4" /></span>
+                                            {whyUs}
+                                        </div>
+                                    ))
+                                    }
+                                </div>
+
+                                <Button>Start Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Our Approach  */}
+                <section>
+                    <div className="space-y-8 w-10/12 mx-auto">
+                        <div className="flex flex-row-reverse justify-between items-center gap-36 ">
+                            <div>
+                            <div className="relative flex-1 rounded-3xl">
+                                    {/* Bottom image */}
+                                    <img
+                                        src={ApproachImage1}
+                                        alt="Approach Image 1"
+                                        className="object-cover rounded-3xl"
+                                    />
+
+                                    {/* Top image */}
+                                    <img
+                                        src={ApproachImage2}
+                                        alt="Approach Image 2"
+                                        className="absolute left-1/2 top-80 object-cover rounded-xl shadow-lg -translate-x-1/2"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-14 flex-1">
+                                <h3 className="text-4xl leading-14">We connect our customers with the best, and help them keep up-and stay open.</h3>
+
+                                <div className="flex flex-col gap-6">
+                                    {[{
+                                        heading: "We connect our customers with the best.",
+                                        icon: Feather
+                                    },
+                                    {
+                                        heading: "Advisor success customer launch party.",
+                                        icon: Eye
+                                    },
+                                    {
+                                        heading: "Business-to-consumer long tail.",
+                                        icon: Sun
+                                    },
+
+                                    ].map((approach, index) => (
+                                        <div key={index} className={`${index === 0 ? "text-[rgba(255,255,255,1)] bg-[rgba(10,38,64,1)]" : "text-[rgba(10,38,64,1)] bg-[rgba(255,255,255,1)]" } text-base font-semibold rounded-sm leading-7 flex items-center gap-4 p-6`}>
+                                            <approach.icon className="w-5 h-5" />
+                                            {approach.heading}
+                                        </div>
+                                    ))
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 { /* FAQ */}
                 <section>
