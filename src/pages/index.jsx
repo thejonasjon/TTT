@@ -1,8 +1,6 @@
 import Footer from "../components/Footer";
 import Hero from "../components/hero";
-import NavBar from "../components/navbar";
 
-import BlogImage1 from '../assets/images/blogimg1.png'
 import FAQImage from '../assets/images/FAQimg.png'
 import WhyUsImage1 from '../assets/images/whyUsimg1.png'
 import WhyUsImage2 from '../assets/images/whyUsimg2.jpg'
