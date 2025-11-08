@@ -10,7 +10,7 @@ import ApproachImage1 from '../assets/images/approachImg1.png'
 import ApproachImage2 from '../assets/images/approachImg2.jpg'
 
 
-import { ArrowRight, Check, ChevronDown, Eye, Feather, Sun } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ChevronDown, Eye, Feather, Sun } from "lucide-react";
 import Button from "../ui/Button";
 
 export default function Home(){
@@ -30,12 +30,9 @@ export default function Home(){
         <div>
             {/* Header */}
             <Hero />
-            <div>
-                hello
-            </div>
 
             {/* Main */}
-            <main className="space-y-12">
+            <main className="space-y-36">
                 {/* Our Services */}
                 <section>
                     <div className="space-y-12 py-20">
@@ -82,41 +79,44 @@ export default function Home(){
 
                 {/* WHY US  */}
                 <section>
-                    <div className="space-y-8 w-10/12 mx-auto">
-                        <div className="flex justify-between items-center gap-36 ">
-                            <div>
-                            <div className="relative flex-1 rounded-3xl">
-                                    {/* Bottom image */}
-                                    <img
-                                        src={WhyUsImage1}
-                                        alt="Why Us Image 1"
-                                        className="object-cover rounded-3xl"
-                                    />
+                    <div className="w-10/12 mx-auto py-20 space-y-8">
+                        <div className="flex justify-between items-center gap-36">
+                            {/* Left side (images) */}
+                            <div className="flex-1 relative">
+                                <img
+                                src={WhyUsImage1}
+                                alt="Why Us Image 1"
+                                className="w-full object-cover rounded-3xl"
+                                />
 
-                                    {/* Top image */}
+                                <div className="relative -mt-78 flex justify-center">
                                     <img
                                         src={WhyUsImage2}
                                         alt="Why Us Image 2"
-                                        className="absolute left-1/2 top-[200px] object-cover rounded-3xl shadow-lg -translate-x-1/2"
+                                        className="object-cover rounded-3xl shadow-lg"
                                     />
                                 </div>
                             </div>
 
-                            <div className="space-y-14 flex-1">
-                                <h3 className="text-4xl leading-14">We connect our customers with the best, and help them keep up-and stay open.</h3>
+                            {/* Right side (text content) */}
+                            <div className="flex-1 space-y-14">
+                                <h3 className="text-4xl leading-[1.4]">
+                                    We connect our customers with the best, and help them keep up—and stay open.
+                                </h3>
 
                                 <div className="flex flex-col gap-6">
-                                    {[
-                                        "We connect our customers with the best.",
-                                        "Advisor success customer launch party.",
-                                        "Business-to-consumer long tail."
-                                    ].map((whyUs, index) => (
-                                        <div key={index} className="text-xl leading-8 flex items-center gap-4">
-                                            <span className="p-1 rounded-full bg-[rgba(10,38,64,1)] text-[rgba(255,255,255,1)]"><Check className="w-4 h-4" /></span>
-                                            {whyUs}
-                                        </div>
-                                    ))
-                                    }
+                                {[
+                                    "We connect our customers with the best.",
+                                    "Advisor success customer launch party.",
+                                    "Business-to-consumer long tail."
+                                ].map((whyUs, index) => (
+                                    <div key={index} className="text-xl leading-8 flex items-center gap-4">
+                                    <span className="p-1 rounded-full bg-[rgba(10,38,64,1)] text-white">
+                                        <Check className="w-4 h-4" />
+                                    </span>
+                                    {whyUs}
+                                    </div>
+                                ))}
                                 </div>
 
                                 <Button>Start Now</Button>
@@ -130,7 +130,7 @@ export default function Home(){
                     <div className="space-y-8 w-10/12 mx-auto">
                         <div className="flex flex-row-reverse justify-between items-center gap-36 ">
                             <div>
-                            <div className="relative flex-1 rounded-3xl">
+                            <div className="flex-1 relative">
                                     {/* Bottom image */}
                                     <img
                                         src={ApproachImage1}
@@ -139,15 +139,18 @@ export default function Home(){
                                     />
 
                                     {/* Top image */}
-                                    <img
+                                    <div className="relative -mt-50 flex justify-center">
+                                        <img
                                         src={ApproachImage2}
                                         alt="Approach Image 2"
-                                        className="absolute left-1/2 top-80 object-cover rounded-xl shadow-lg -translate-x-1/2"
-                                    />
+                                        className="object-cover rounded-3xl shadow-lg"
+                                        />
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div className="space-y-14 flex-1">
+                            <div className="space-y-14 md:w-5/12">
                                 <h3 className="text-4xl leading-14">We connect our customers with the best, and help them keep up-and stay open.</h3>
 
                                 <div className="flex flex-col gap-6">
@@ -165,7 +168,7 @@ export default function Home(){
                                     },
 
                                     ].map((approach, index) => (
-                                        <div key={index} className={`${index === 0 ? "text-[rgba(255,255,255,1)] bg-[rgba(10,38,64,1)]" : "text-[rgba(10,38,64,1)] bg-[rgba(255,255,255,1)]" } text-base font-semibold rounded-sm leading-7 flex items-center gap-4 p-6`}>
+                                        <div key={index} className={`${index === 0 ? "text-[rgba(255,255,255,1)] bg-[rgba(10,38,64,1)]" : "text-[rgba(10,38,64,1)] bg-[rgba(255,255,255,1)]" } text-base font-semibold rounded-sm leading-7 flex items-center gap-4 p-3`}>
                                             <approach.icon className="w-5 h-5" />
                                             {approach.heading}
                                         </div>
@@ -173,6 +176,78 @@ export default function Home(){
                                     }
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Testimonial */}
+                <section>
+                    <div className="space-y-12 bg-[rgba(10,38,64,1)] p-26">
+                        <div className="w-full flex justify-between items-center">
+                            <h2 className="text-5xl text-[rgba(225,225,225,1)] font-manrope font-normal leading-18 max-w-[60%]">
+                                An enterprise template to ramp up your company website
+                            </h2>
+
+                            <div className="flex self-end gap-4">
+                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full p-3">
+                                <ArrowRight className="w-5 h-5" />
+                                </button>
+                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full p-3">
+                                <ArrowLeft className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="flex gap-8">
+                            {[{
+                                quote: "“Buyer buzz partner network disruptive non-disclosure agreement business”",
+                                user: {
+                                fullName: "Albus Dumbledore",
+                                role: "Manager",
+                                company: "Howarts",
+                                profilePhoto: ""
+                                }
+                            },
+                            {
+                                quote: "“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”",
+                                user: {
+                                fullName: "Severus Snape",
+                                role: "Manager",
+                                company: "Slytherin",
+                                profilePhoto: ""
+                                }
+                            },
+                            {
+                                quote: "“Release facebook responsive web design business model canvas seed money monetization.”",
+                                user: {
+                                fullName: "Harry Potter",
+                                role: "Team Leader",
+                                company: "Gryffindor",
+                                profilePhoto: "jj"
+                                }
+                            }].map((testimonial, index) => (
+                                <div className="space-y-8 bg-[rgba(255,255,255,1)] rounded-xl w-2/6 h-fit p-10">
+                                    <div className="text-2xl text-[rgba(0,0,0,1)] leading-9">
+                                        {testimonial.quote}
+                                    </div>
+
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-full">
+                                            <img src="#" alt="" className="w-full h-full rounded-full" />
+                                        </div>
+
+                                        <div>
+                                            <div className="text-base text-[rgba(10,38,64,1)] font-bold leading-8">
+                                                {testimonial.user.fullName}
+                                            </div>
+                                            <div className="text-sm text-[rgba(10,38,64,1)] leading-8">
+                                                {testimonial.user.role} @ {testimonial.user.company}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
