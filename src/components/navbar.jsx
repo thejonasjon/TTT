@@ -1,6 +1,4 @@
-import { NavLink } from "react-router-dom";
-import Button from "../ui/Button";
-
+import { Link, NavLink } from "react-router-dom";
 import Logo from '../../public/Logo.png'
 
 export default function NavBar() {
@@ -13,12 +11,12 @@ export default function NavBar() {
   return (
     <nav className="relative z-10 flex items-center justify-between">
       {/* Logo */}
-      <div className="flex items-center gap-2 text-[43.25px] text-[rgba(255,255,255,1)] font-bold">
-        <div>
-            <img src={Logo} alt="Logo" />
-        </div>
-        Boldo
-      </div>
+        <Link to="#" className="flex items-center gap-2 text-[43.25px] text-[rgba(255,255,255,1)] font-bold">
+            <div>
+                <img src={Logo} alt="Logo" />
+            </div>
+            Boldo
+        </Link>
 
       <div className="flex justify-center items-center space-x-10">
         {/* Navigation Links */}
@@ -30,7 +28,7 @@ export default function NavBar() {
                 className={({ isActive }) =>
                     isActive
                     ? "text-[rgba(255,255,255,1)] font-semibold"
-                    : "text-base text-[rgba(255,255,255,1)] font-semibold hover:text-grey-700 transition-colors "
+                    : "text-base text-[rgba(255,255,255,1)] font-semibold hover:text-gray-200 transition-colors duration-75"
                 }
                 >
                 {item.name}
@@ -39,12 +37,9 @@ export default function NavBar() {
             ))}
         </ul>
 
-        {/* Right-side CTA or button */}
-        <div>
-            <Button btnType="primary" className="text-base bg-[rgba(255,255,255,1)] text-[rgba(10,38,64,1)] hover:bg-gray-100 px-10 py-2">
-                Log In
-            </Button>
-        </div>
+        <button className="text-base font-bold bg-[rgba(255,255,255,1)] text-[rgba(10,38,64,1)] px-10 py-2 whitespace-nowrap items-center font-sans rounded-4xl transition-all duration-200 hover:bg-gray-100 hover:shadow-md">
+            Log In
+        </button>
       </div>
     </nav>
   );

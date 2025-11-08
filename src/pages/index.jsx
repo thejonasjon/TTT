@@ -8,12 +8,70 @@ import WhyUsImage1 from '../assets/images/whyUsimg1.png'
 import WhyUsImage2 from '../assets/images/whyUsimg2.jpg'
 import ApproachImage1 from '../assets/images/approachImg1.png'
 import ApproachImage2 from '../assets/images/approachImg2.jpg'
-
+import ServiceImage1 from '../assets/images/serviceImg1.png'
+import ServiceImage2 from '../assets/images/serviceImg2.png'
+import ServiceImage3 from '../assets/images/serviceImg3.png'
+import UserPhoto1 from '../assets/images/userPhoto1.png'
+import UserPhoto2 from '../assets/images/userPhoto2.png'
+import UserPhoto3 from '../assets/images/userPhoto3.png'
+import ArticleUserPhoto1 from '../assets/images/articleUserPhoto1.png'
+import ArticleUserPhoto2 from '../assets/images/articleUserPhoto2.png'
+import ArticleUserPhoto3 from '../assets/images/articleUserPhoto3.png'
+import ArticleImg1 from '../assets/images/articleImg1.png'
+import ArticleImg2 from '../assets/images/articleImg2.png'
+import ArticleImg3 from '../assets/images/articleImg3.png'
 
 import { ArrowLeft, ArrowRight, Check, ChevronDown, Eye, Feather, Sun } from "lucide-react";
 import Button from "../ui/Button";
 
 export default function Home(){
+
+    const services = [
+        {
+            title: "Cool feature title",
+            description: "Learning curve network effects return on investment.",
+            image: ServiceImage1
+        },
+        {
+            title: "Even cooler feature",
+            description: "Learning curve network effects return on investment.",
+            image: ServiceImage2
+        },
+        {
+            title: "Cool feature title",
+            description: "Learning curve network effects return on investment.",
+            image: ServiceImage3
+        },
+    ];
+
+    const testimonials = [{
+            quote: "“Buyer buzz partner network disruptive non-disclosure agreement business”",
+            user: {
+            fullName: "Albus Dumbledore",
+            role: "Manager",
+            company: "Howarts",
+            profilePhoto: UserPhoto1
+            }
+        },
+        {
+            quote: "“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”",
+            user: {
+            fullName: "Severus Snape",
+            role: "Manager",
+            company: "Slytherin",
+            profilePhoto: UserPhoto2
+            }
+        },
+        {
+            quote: "“Release facebook responsive web design business model canvas seed money monetization.”",
+            user: {
+            fullName: "Harry Potter",
+            role: "Team Leader",
+            company: "Gryffindor",
+            profilePhoto: UserPhoto3
+            }
+    }]
+
     const faqs = [
 
         {
@@ -25,6 +83,34 @@ export default function Home(){
             description: "Our Android team constantly innovates to deliver high-performance mobile solutions that exceed expectations.",
         },
     ];
+
+     const articles = [{
+            title: "Pitch termsheet backing validation focus release.",
+            date: "November 22, 2021",
+            img: ArticleImg1,
+            user: {
+            fullName: "Chandler Bing",
+            profilePhoto: ArticleUserPhoto1
+            }
+        },
+        {
+            title: "Seed round direct mailing non-disclosure agreement graphical user interface rockstar.",
+            date: "November 22, 2021",
+            img: ArticleImg2,
+            user: {
+            fullName: "Rachel Green",
+            profilePhoto: ArticleUserPhoto2
+            }
+        },
+        {
+            title: "Beta prototype sales iPad gen-z marketing network effects value proposition.",
+            date: "November 22, 2021",
+            img: ArticleImg3,
+            user: {
+            fullName: "Monica Geller",
+            profilePhoto: ArticleUserPhoto3
+            }
+    }]
 
     return(
         <div>
@@ -42,15 +128,15 @@ export default function Home(){
                         </div>
 
                         <div className="w-10/12 mx-auto flex justify-between gap-8">
-                            {[1, 2, 3].map((blog, index) => (
+                            {services.map((service, index) => (
                             <div key={index} className="space-y-6 w-[300px]">
                                 {/* Image container */}
                                 <div
                                     className="w-[300px] h-auto rounded-2xl overflow-hidden"
                                     >
                                     <img
-                                    src={BlogImage1}
-                                    alt="Service Thumbnail"
+                                    src={service.image}
+                                    alt={`${service.image} Image`}
                                     className="w-full h-full object-contain"
                                     />
                                 </div>
@@ -59,11 +145,11 @@ export default function Home(){
                                 <div className="space-y-3">
                                     <div className="space-y-1">
                                         <div className="text-2xl leading-9 text-[rgba(0,0,0,1)]">
-                                            Cool feature title
+                                            {service.title}
                                         </div>
 
                                         <div className="text-xl font-normal text-[rgba(119,119,119,1)] leading-8">
-                                            Learning curve network effects return on investment.
+                                            {service.description}
                                         </div>
                                     </div>
 
@@ -89,12 +175,14 @@ export default function Home(){
                                 className="w-full object-cover rounded-3xl"
                                 />
 
-                                <div className="relative -mt-78 flex justify-center">
-                                    <img
+                                <div className="relative -mt-74 -mr-40 flex justify-center">
+                                    <div className="flex bg-white shadow-md rounded-xl px-8 py-10">
+                                        <img
                                         src={WhyUsImage2}
                                         alt="Why Us Image 2"
-                                        className="object-cover rounded-3xl shadow-lg"
-                                    />
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -139,7 +227,7 @@ export default function Home(){
                                     />
 
                                     {/* Top image */}
-                                    <div className="relative -mt-50 flex justify-center">
+                                    <div className="relative -mt-50 -ml-25 flex justify-center">
                                         <img
                                         src={ApproachImage2}
                                         alt="Approach Image 2"
@@ -168,7 +256,7 @@ export default function Home(){
                                     },
 
                                     ].map((approach, index) => (
-                                        <div key={index} className={`${index === 0 ? "text-[rgba(255,255,255,1)] bg-[rgba(10,38,64,1)]" : "text-[rgba(10,38,64,1)] bg-[rgba(255,255,255,1)]" } text-base font-semibold rounded-sm leading-7 flex items-center gap-4 p-3`}>
+                                        <div key={index} className={`${index === 0 ? "text-[rgba(255,255,255,1)] bg-[rgba(10,38,64,1)]" : "text-[rgba(10,38,64,1)] bg-[rgba(255,255,255,1)] shadow-md" } text-base font-semibold rounded-sm leading-7 flex items-center gap-4 p-3`}>
                                             <approach.icon className="w-5 h-5" />
                                             {approach.heading}
                                         </div>
@@ -189,51 +277,25 @@ export default function Home(){
                             </h2>
 
                             <div className="flex self-end gap-4">
-                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full p-3">
-                                <ArrowRight className="w-5 h-5" />
+                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full hover:bg-[rgba(225,225,225,1)]/90 transition-all duration-75 p-4">
+                                <ArrowRight className="w-6 h-6" />
                                 </button>
-                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full p-3">
-                                <ArrowLeft className="w-5 h-5" />
+                                <button className="text-[rgba(10,38,64,1)] bg-[rgba(225,225,225,1)] rounded-full hover:bg-[rgba(225,225,225,1)]/90 transition-all duration-75 p-4">
+                                <ArrowLeft className="w-6 h-6" />
                                 </button>
                             </div>
                         </div>
 
                         <div className="flex gap-8">
-                            {[{
-                                quote: "“Buyer buzz partner network disruptive non-disclosure agreement business”",
-                                user: {
-                                fullName: "Albus Dumbledore",
-                                role: "Manager",
-                                company: "Howarts",
-                                profilePhoto: ""
-                                }
-                            },
-                            {
-                                quote: "“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”",
-                                user: {
-                                fullName: "Severus Snape",
-                                role: "Manager",
-                                company: "Slytherin",
-                                profilePhoto: ""
-                                }
-                            },
-                            {
-                                quote: "“Release facebook responsive web design business model canvas seed money monetization.”",
-                                user: {
-                                fullName: "Harry Potter",
-                                role: "Team Leader",
-                                company: "Gryffindor",
-                                profilePhoto: "jj"
-                                }
-                            }].map((testimonial, index) => (
-                                <div className="space-y-8 bg-[rgba(255,255,255,1)] rounded-xl w-2/6 h-fit p-10">
+                            {testimonials.map((testimonial, index) => (
+                                <div key={index} className="space-y-8 bg-[rgba(255,255,255,1)] rounded-xl w-2/6 h-fit p-10">
                                     <div className="text-2xl text-[rgba(0,0,0,1)] leading-9">
                                         {testimonial.quote}
                                     </div>
 
                                     <div className="flex items-center gap-4">
                                         <div className="w-12 h-12 rounded-full">
-                                            <img src="#" alt="" className="w-full h-full rounded-full" />
+                                            <img src={testimonial.user.profilePhoto} alt={`${testimonial.user.fullName} profile photo`} className="w-full h-full rounded-full" />
                                         </div>
 
                                         <div>
@@ -274,7 +336,7 @@ export default function Home(){
                                     <button className="w-full flex items-center justify-between text-left text-xl gap-4">
                                         <span>{faq.question}</span>
                                         <span className="p-1 rounded-full text-white bg-[rgba(10,38,64,1)] group-hover:rotate-180 transition-transform duration-300">
-                                        <ChevronDown className="w-4 h-4" />
+                                        <ChevronDown className="w-6 h-6" />
                                         </span>
                                     </button>
 
@@ -298,14 +360,14 @@ export default function Home(){
                         </div>
 
                         <div className="w-8/12 mx-auto flex gap-8">
-                            {[1, 2, 3].map((blog, index) => (
+                            {articles.map((article, index) => (
                             <div key={index} className="space-y-6">
                                 {/* Image container */}
                                 <div
                                     className="w-[290px] h-[200px] rounded-2xl overflow-hidden"
                                     >
                                     <img
-                                    src={BlogImage1}
+                                    src={article.img}
                                     alt="Blog Thumbnail"
                                     className="w-full h-full object-cover object-[center_30%]"
                                     />
@@ -316,29 +378,33 @@ export default function Home(){
                                     <div className="space-y-2">
                                         <div className="flex gap-4 text-base leading-7 text-[rgba(119,119,119,1)]">
                                             <span className="text-[rgba(10,38,64,1)] font-bold">Category</span>{" "}
-                                            November 22, 2021
+                                            {article.date}
                                         </div>
 
                                         <div className="text-xl text-[rgba(0,0,0,1)] leading-8">
-                                            Pitch termsheet backing validation focus release.
+                                            {article.title}
                                         </div>
                                     </div>
 
                                     <div className="flex items-center gap-2">
                                         <div className="w-8 h-8 rounded-full overflow-hidden">
                                             <img
-                                            src={BlogImage1}
+                                            src={article.user.profilePhoto}
                                             alt="Author"
                                             className="w-full h-full object-cover rounded-full"
                                             />
                                         </div>
                                         <div className="text-base text-[rgba(0,0,0,1)] leading-7">
-                                            Chandler Bing
+                                            {article.user.fullName}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         ))}
+                        </div>
+
+                        <div className="text-center">
+                            <Button btnType="outline" className="text-blue-950 bg-transparent border-2 border-[rgba(10,38,64,1)]">Learn more</Button>
                         </div>
                     </div>
                 </section>

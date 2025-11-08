@@ -5,21 +5,21 @@ import NewsLetter from "./NewsLetter";
 
 export default function Footer(){
     return (
-        <section>
+        <section className="bg-white">
             <div className="space-y-12 w-11/12 mx-auto">
                 <NewsLetter />
 
                 <footer className="py-24">
-                    <div className="flex">
-                        <div className="flex flex-col gap-6">
+                    <div className="flex gap-26">
+                        <div className="flex flex-col gap-6 md:w-[24%]">
                             <div>
                                 <img src={BoldoLogoBlack} alt="Boldo Logo Black" />
                             </div>
 
-                            <p className="w-1/2 text-base text-[rgba(119,119,119,1)]">Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.</p>
+                            <p className="text-base text-[rgba(119,119,119,1)]">Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.</p>
                         </div>
 
-                        <div className="w-full flex justify-between gap-4">
+                        <div className="md:w-[50%] flex justify-between gap-4">
                             <div className="space-y-6">
                                 <div className="text-xl font-bold text-[rgba(0,0,0,1)] leading-8">
                                     Landings

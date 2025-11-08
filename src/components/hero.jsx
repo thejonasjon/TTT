@@ -11,13 +11,13 @@ import PrestoLogo from "../assets/images/prestologo.png";
 export default function Hero() {
   return (
     <div className="relative overflow-hidden flex h-screen bg-[rgba(10,38,64,1)]">
-        {/* Ellipse gradient top-right */}
-        <div className="absolute top-[-280px] right-[-280px] w-[100vh] aspect-square rounded-full bg-[rgba(28,61,91,1)] z-0"></div>
-        <div className="space-y-16 w-11/12 mx-auto my-auto">
+        {/* gradient top-right */}
+        <div className="absolute top-[-280px] right-[-260px] w-[100vh] aspect-square rounded-full bg-[rgba(28,61,91,1)] z-0"></div>
+        <div className="space-y-16 w-10/12 mx-auto my-auto">
             <NavBar />
 
             {/* Hero main content */}
-            <div className="relative z-10 grid grid-cols-2 items-center justify-between gap-40">
+            <div className="relative z-10 grid grid-cols-2 items-center justify-between gap-10">
                 <div className="space-y-10">
                 <div className="space-y-4">
                     <h1 className="font-manrope text-5xl font-normal leading-[1.3] text-[rgba(255,255,255,1)]">
