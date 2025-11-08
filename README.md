@@ -59,4 +59,4 @@ Deployed using **Vercel** for a quick preview.
 
 ## License
 
-This project is for **assessment and educational purposes** only.
+This project is for **assessment** only.
