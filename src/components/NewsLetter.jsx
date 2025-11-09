@@ -4,7 +4,7 @@ export default function NewsLetter() {
   return (
     <div className="relative overflow-hidden bg-[rgba(10,38,64,1)] rounded-2xl py-10 md:py-16">
       {/* Background Circle */}
-      <div className="absolute top-[-420px] right-[-150px] w-[100vh] aspect-square rounded-full bg-[rgba(28,61,91,1)] z-0"></div>
+      <div className="absolute md:top-[-580px] md:right-[-190px] w-[100vh] aspect-square rounded-full bg-[rgba(28,61,91,1)] z-0"></div>
 
       <div className="relative z-10 w-11/12 sm:w-10/12 md:w-7/12 mx-auto space-y-8 sm:space-y-10 md:space-y-12 px-4">
         <h3 className="text-2xl sm:text-3xl md:text-5xl text-white font-manrope leading-tight md:leading-[1.3] text-center">
