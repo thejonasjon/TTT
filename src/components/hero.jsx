@@ -13,7 +13,7 @@ export default function Hero() {
     <div className="relative overflow-hidden flex flex-col min-h-screen bg-[rgba(10,38,64,1)]">
       <div className="absolute top-[-280px] right-[-260px] w-[100vh] aspect-square rounded-full bg-[rgba(28,61,91,1)] z-0"></div>
 
-      <div className="w-11/12 md:w-10/12 mx-auto my-auto space-y-12 md:space-y-16 relative z-10">
+      <div className="w-11/12 md:w-10/12 mx-auto  space-y-12 md:space-y-16 relative z-10">
         {/* Navbar */}
         <NavBar />
 

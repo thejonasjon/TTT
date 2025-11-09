@@ -136,7 +136,7 @@ export default function Home() {
       <main className="space-y-12 md:space-y-36">
         {/* Services */}
         <section>
-          <div className="space-y-12 py-16 sm:py-20 px-4 sm:px-8">
+          <div className="space-y-12 pt-16 sm:pt-20 px-4 sm:px-8">
             {/* Header Section */}
             <div className="w-full md:w-8/12 mx-auto text-center space-y-4">
               <h5 className="text-base sm:text-lg md:text-xl text-[rgba(119,119,119,1)] font-sans leading-7 sm:leading-8">
@@ -190,7 +190,7 @@ export default function Home() {
 
         {/* WHY US  */}
         <section>
-          <div className="w-11/12 md:w-10/12 mx-auto py-12 md:py-20 space-y-8 ">
+          <div className="w-11/12 md:w-10/12 mx-auto space-y-8 ">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-36">
               <div className="flex-1 relative flex flex-col items-center lg:items-start">
                 <img
@@ -405,7 +405,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="w-full md:w-8/12 mx-auto flex flex-col md:flex-row flex-wrap gap-8 justify-center">
+            <div className="w-full md:w-8/12 mx-auto flex flex-col md:flex-row flex-wrap gap-10 justify-center">
               {articles.map((article, index) => (
                 <div key={index} className="space-y-6 w-full sm:w-[290px] px-4 md:px-0">
                   <div className="w-full h-48 sm:h-[200px] rounded-2xl overflow-hidden">
